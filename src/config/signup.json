@@ -1,0 +1,33 @@
+[
+  {
+    "label": "Username",
+    "name": "userName",
+    "type": "text",
+    "placeholder": "Arun"
+  },
+  {
+    "label": "Email",
+    "name": "email",
+    "type": "email",
+    "placeholder": "arun@example.com"
+  },
+  {
+    "label": "Phone Number",
+    "name": "phone",
+    "type": "tel",
+    "placeholder": "+1 (555) 123-4567"
+  },
+  {
+    "label": "Password",
+    "name": "password",
+    "type": "password",
+    "placeholder": "Create a strong password",
+    "hasToggle": true
+  },
+  {
+    "label": "Confirm Password",
+    "name": "confirmPassword",
+    "type": "password",
+    "placeholder": "Confirm your password"
+  }
+]

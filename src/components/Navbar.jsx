@@ -35,10 +35,6 @@ const Navbar = () => {
                     <Link to="/contact" className={`${location.pathname === '/contact' ? "text-[#4B682A] font-semibold " : "text-[#4B5563]"} text-[18px]`}>Contact</Link>
                 </div>
                 <div className="flex items-center">
-                    <Link to="/signIn" className="border-[#d3e0b9] mr-5 border text-[#4b682a] hover:bg-[#f4f7ed] flex items-center px-4 py-2 rounded-lg  transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
-                            <User className="h-4 w-4 mr-2" />
-                            Sign In
-                    </Link>
                     <Link to="/cart" className="relative cursor-pointer">
                         <svg className="w-6 h-6 text-[#4B682A]" fill="none" stroke="currentColor" strokeWidth={2}
                             viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
@@ -51,7 +47,13 @@ const Navbar = () => {
                             {totalQuantity}
                         </div>}
                     </Link>
-                    <Link to="/subscription" className="ml-5 px-4 py-3 bg-[#81AB45] hover:bg-[#4B682A] text-white font-bold rounded-xl text-md hidden min-[900px]:flex">Subscribe Now</Link>
+                    <Link
+                        to="/signIn"
+                        className="hidden min-[900px]:flex ml-5 border border-[#4b682a] text-[#4b682a] hover:bg-[#4b682a] hover:text-white items-center px-4 py-2 rounded-lg transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+                    >
+                        <User className="h-4 w-4 mr-2" />
+                        Sign In
+                    </Link>
                     <div className="min-[900px]:hidden ml-5">
                         <button className="items-center flex cursor-pointer" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
                             {!isMobileMenuOpen && <svg className="w-6 h-6 text-[#4B682A]" fill="none" stroke="currentColor" strokeWidth={2}
@@ -71,10 +73,9 @@ const Navbar = () => {
                 <div className="absolute top-16 left-0 w-full z-50 min-[900px]:hidden mt-4 space-y-1 text-gray-700 font-medium shadow-md bg-white px-6 pb-4">
                     <Link to="/" onClick={() => handleDropdownVal("/")} className={`${selectdPath === '/' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg  px-3 py-3 rounded-xl`}>Home</Link>
                     <Link to="/products" onClick={() => handleDropdownVal("/products")} className={`${selectdPath === '/products' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg  px-3 py-3 rounded-xl`}>Products</Link>
-                    <Link to="/subscription" onClick={() => handleDropdownVal("/subscription")} className={`${selectdPath === '/subscription' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg  px-3 py-3 rounded-xl`}>Subscription</Link>
                     <Link to="/contact" onClick={() => handleDropdownVal("/contact")} className={`${selectdPath === '/contact' ? "text-[#4B682A] bg-[#F4F7ED] font-semibold" : "hover:bg-[#F4F7ED]"} block text-lg px-3 py-3 rounded-xl`}>Contact</Link>
-                    <Link to="/subscription" onClick={() => handleDropdownVal("/subscription")} className="flex text-lg items-center space-x-4 mt-2 w-full">
-                        <div className="py-2 bg-[#81AB45] hover:bg-[#4B682A] text-center text-white h-[50px] font-bold w-full rounded-[14px]">Subscribe Now</div>
+                    <Link to="/signIn" onClick={() => handleDropdownVal("/signIn")} className="flex text-lg items-center space-x-4 mt-2 w-full">
+                        <div className="py-2 bg-[#81AB45] hover:bg-[#4B682A] text-center text-white h-[50px] font-bold w-full rounded-[14px]">Sign In</div>
                     </Link>
                 </div>
             )}
